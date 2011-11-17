@@ -1,0 +1,68 @@
+/* TEAM */
+  <your title>: <your name>
+  Site:
+  Twitter:
+  Location:
+
+/* THANKS */
+  Names (& URL):
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: HTML5 Boilerplate, Bootstrap, Modernizr, jQuery
+  Software:
+  
+  Hosted on: App Engine
+  Humans.txt ASCII: GlassGiant.com
+
+
+                 5555   5555 5555555555 55555  55555 5555
+                 5555   5555 5555555555 555555555555 5555
+                 55555555555    5555    555555555555 5555
+                 55555555555    5555    555555555555 5555
+                 5555   5555    5555    5555 55 5555 555555555
+                 5555   5555    5555    5555    5555 555555555
+
+
+
+           HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH            
+           HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH            
+           HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH            
+           HHHHHHHHHHHHHHHHHHHHHHHHHHHHHTTTTTTTTTTTTTTTTTTTTTTHHHHH             
+            HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTTTTTTTTTTTTTTTTTTTTTHHHHH             
+            HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTTTTTTTTTTTTTTTTTTTTTHHHHH             
+            HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTTTTTTTTTTTTTTTTTTTTTHHHHH             
+            HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTTTTTTTTTTTTTTTTTTTTTHHHHH             
+            HHHHHHHHHHllllllllllllllllll                 TTTTTHHHHH             
+            HHHHHHHHHHllllllllllllllllll                 TTTTTHHHHH             
+            HHHHHHHHHHllllllllllllllllll                 TTTTTHHHH              
+            HHHHHHHHHHllllllllllllllllll                 TTTTHHHHH              
+             HHHHHHHHHllllllllMMMMMMMMMMTTTTTTTTTTTTTTTTTTTTTHHHHH              
+             HHHHHHHHHllllllllMMMMMMMMMMTTTTTTTTTTTTTTTTTTTTTHHHHH              
+             HHHHHHHHHllllllllMMMMMMMMMMTTTTTTTTTTTTTTTTTTTTTHHHHH              
+             HHHHHHHHHHlllllllMMMMMMMMMMTTTTTTTTTTTTTTTTTTTTTHHHHH              
+             HHHHHHHHHHlllllllMMMMMMMMMMTTTTTTTTTTTTTTTTTTTTTHHHHH              
+             HHHHHHHHHHlllllllllllllllll                TTTTTHHHH               
+             HHHHHHHHHHlllllllllllllllll                TTTTHHHHH               
+              HHHHHHHHHlllllllllllllllll                TTTTHHHHH               
+              HHHHHHHHHlllllllllllllllll               TTTTTHHHHH               
+              HHHHHHHHHHllllllllllllllll               TTTTTHHHHH               
+              HHHHHHHHHHHHHHHHHHHHHHHHHHTTTTTTTT       TTTTTHHHHH               
+              HHHHHHHHHHHHHHHHHHHHHHHHHHTTTTTTTT       TTTTTHHHHH               
+              HHHHHHHHHHlllllllHHHHHHHHHTTTTTTTT       TTTTTHHHHH               
+              HHHHHHHHHHlllllllHHHHHHHHHTTTTTTTT       TTTTHHHHH                
+               HHHHHHHHHlllllll?HHHHHHHHTTTTTTT        TTTTHHHHH                
+               HHHHHHHHHllllllllHHHHHHHHTTTTTTT        TTTTHHHHH                
+               HHHHHHHHHHllllllllllllHHHTT             TTTTHHHHH                
+               HHHHHHHHHHlllllllllllllll              TTTTTHHHHH                
+               HHHHHHHHHHlllllllllllllll              TTTTTHHHHH                
+               HHHHHHHHHHHHHllllllllllll            TTTTTTTHHHHH                
+               HHHHHHHHHHHHHHHHHHlllllll      TTTTTTTTTTTTHHHHH                 
+               HHHHHHHHHHHHHHHHHHHHHHHHlTTTTTTTTTTTTTTTTTTHHHHH                 
+                HHHHHHHHHHHHHHHHHHHHHHHHTTTTTTTTTTTTTTTTTTHHHHH                 
+                HHHHHHHHHHHHHHHHHHHHHHHHTTTTTTTTTTTTTTTHHHHHHHH                 
+                HHHHHHHHHHHHHHHHHHHHHHHHTTTTTTTTTHHHHHHHHHHHHHH                 
+                 HHHHHHHHHHHHHHHHHHHHHHHTTTTHHHHHHHHHHHHHHHHHH                  
+                      HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH                        
+                            HHHHHHHHHHHHHHHHHHHHHHH                             
+                                  HHHHHHHHHHH                                   
