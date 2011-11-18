@@ -21,8 +21,10 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
   <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/kd.css">
   <link rel="stylesheet" href="/css/shape.css">
-  <link rel="stylesheet" href="/css/tablet.css">
+  <link rel="stylesheet" href="/css/size-tiny.css" media="screen and (max-width:480px)">
+  <link rel="stylesheet" href="/css/size-full.css" media="screen and (min-width:481px)">
   
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
@@ -36,49 +38,52 @@
     <div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand" href="#">HTML5Hipster</a>
-          <ul class="nav">
-            <!--<li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>-->
+          <a class="brand">HTML5Hipster</a>
+          <ul class="nav secondary-nav">        
+            <li class="dropdown" data-dropdown="dropdown">
+              <a href="#" class="dropdown-toggle">Share</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Save</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Recommend</a></li>
+                <li><a href="#">Tweet</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
     </div>
     
     <div class="container">
-
-      <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit" style="height:200px;">
-        <img src="/img/html5hipster-small.png" style="float:right;">
-        <h1>HTML5 Hipster</h1>
-        <p>Coming soon.</p>
-        <!--<p><a class="btn primary large">Learn more &raquo;</a></p>-->
+      <div id="item-collection">
+        <button type="button" class="box">item 1</button>
+        <button type="button" class="box">item 2</button>
+        <button type="button" class="box">item 3</button>
+        <button type="button" class="box">item 4</button>
+        <button type="button" class="box">item 5</button>
+        <button type="button" class="box">item 6</button>
+        <button type="button" class="box">item 7</button>
+        <button type="button" class="box">item 8</button>
+        <button type="button" class="box">item 9</button>
+        <button type="button" class="box">item 10</button>
       </div>
-
-      <!-- Example row of columns -->
-      <!--
-      <div class="row">
-        <div class="span-one-third">
-          <h2>Heading</h2>
-          <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+      <div id="hipster-container">
+        <div id="hipster">
+          <img src="/img/html5hipster-small.png">
         </div>
-        <div class="span-one-third">
-          <h2>Heading</h2>
-           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-       </div>
-        <div class="span-one-third">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+      </div>
+      <div id="item-selector">
+        <div>
+          <button type="button" class="box" id="item-body">body</button>
+          <button type="button" class="box" id="item-hair">hair</button>
+          <button type="button" class="box" id="item-shirt">shirt</button>
+          <button type="button" class="box" id="item-pants">pants</button>
+          <button type="button" class="box" id="item-shoes">shoes</button>
+          <button type="button" class="box" id="item-glasses">glasses</button>
+          <button type="button" class="box" id="item-face">face</button>
+          <button type="button" class="box" id="item-accessories">access</button>
         </div>
-      </div>-->
-
-      <footer>
-        <!--<p>&copy; Company 2011</p>-->
-      </footer>
+      </div>
 
     </div> <!-- /container -->
 
@@ -92,8 +97,9 @@
 
 
   <!-- scripts concatenated and minified via build script -->
-  <script defer src="js/plugins.js"></script>
-  <script defer src="js/script.js"></script>
+  <script defer src="/js/plugins.js"></script>
+  <script defer src="/js/mylibs/bootstrap-dropdown.js"></script>
+  <script defer src="/js/script.js"></script>
   <!-- end scripts -->
 
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.

@@ -1,0 +1,29 @@
+#item-collection {
+  margin-bottom: 125px;
+  width: 80px;
+}
+
+#item-selector {
+  height: 70px; 
+}
+
+#hipster-container {
+  margin-left: 75px;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+}
+
+#item-collection .box {
+  margin: 10px 15px;
+}
+
+#item-selector .box {
+  margin: 10px;
+}
+
+#hipster {
+  width:200px;
+}
