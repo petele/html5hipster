@@ -39,12 +39,12 @@
     <div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand">HTML5Hipster</a>
-          <ul class="nav secondary-nav">        
+          <a class="brand">HTML5 Hipster</a>
+          <ul class="nav secondary-nav">       
             <li class="dropdown" data-dropdown="dropdown">
               <a href="#" class="dropdown-toggle">Share</a>
               <ul class="dropdown-menu">
-                <li><a href="#">Save</a></li>
+                <li><a href="#" onclick="Hipster.savePNG()">Save</a></li>
                 <li class="divider"></li>
                 <li><a href="#">Recommend</a></li>
                 <li><a href="#">Tweet</a></li>
@@ -69,6 +69,8 @@
         <button type="button" class="box">item 10</button>
       </div>
       <div id="hipster-container">
+        <canvas id="saveCanvas" style="display:none;"></canvas>
+        <div draggable="true" style="" id="imgDrag">
           <svg id="hipster" version="1.1"  
             baseProfile="full" viewBox="0 0 550 800" 
             xmlns="http://www.w3.org/2000/svg">
@@ -95,20 +97,9 @@
               <polygon class="arm-hand" points="0,205 50,205 45,255 25,265 5,255" />
             </g>
           </svg>
-          <span style="color:black;">hipster</span>
-
+        </div>
       </div>
       <div id="item-selector">
-        <div>
-          <button type="button" class="box" id="item-body">body</button>
-          <button type="button" class="box" id="item-hair">hair</button>
-          <button type="button" class="box" id="item-shirt">shirt</button>
-          <button type="button" class="box" id="item-pants">pants</button>
-          <button type="button" class="box" id="item-shoes">shoes</button>
-          <button type="button" class="box" id="item-glasses">glasses</button>
-          <button type="button" class="box" id="item-face">face</button>
-          <button type="button" class="box" id="item-accessories">access</button>
-        </div>
       </div>
 
     </div> <!-- /container -->
@@ -123,6 +114,7 @@
 
 
   <!-- scripts concatenated and minified via build script -->
+  <script defer src="/js/mylibs/data.js"></script>
   <script defer src="/js/plugins.js"></script>
   <script defer src="/js/mylibs/bootstrap-dropdown.js"></script>
   <script defer src="/js/script.js"></script>

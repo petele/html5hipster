@@ -10,47 +10,64 @@ body {
   padding: 0 20px;
 }
 
-.container {
-  position: relative;
-}
-
 #item-collection {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
   box-sizing: border-box;
   position: absolute;
   left: 0px;
-  top: 0px;
-  border: 1px solid green;
+  top: 40px;
   background-color: #eee;
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  -webkit-box-shadow: 5px 0px 5px #ddd;
+  display: none;
+  /*-webkit-box-shadow: 5px 0px 5px #ddd;*/
 }
 
 #item-selector {
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
   position: fixed;
   bottom: 0;
-  background-color: #ddd;
+  background-color: #eee;
   overflow-x: auto;
   overflow-y: hidden;
   width: 100%;  
-  -webkit-box-shadow: 0px -5px 5px #ddd;
+  /*-webkit-box-shadow: 0px -5px 5px #ddd;*/
+  display:none;
 }
 
 #hipster-container {
   -webkit-box-sizing: border-box;
-  display: block;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  display: absolute;
+  top: 40px;
+  background-color: #fff;
 }
 
 .box {
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
   border: 1px solid #aaa;
   background-color: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 #item-collection .box {
@@ -61,10 +78,18 @@ body {
   float: left;
 }
 
+.box.active {
+  background-color: red;
+  color: white;
+}
+
 #hipster {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
   margin-left:auto;
   margin-right:auto;
   display:block;
-  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)));
-  border: 1px solid blue;
 }

@@ -22,6 +22,7 @@
   <link rel=stylesheet href='/css/0ddc45f.css'>
   <link rel=stylesheet href="/css/kd.css">
   <link rel=stylesheet href="/css/shape.css">
+  <link rel=stylesheet href="/css/hipster.css">
   <link rel=stylesheet href="/css/size-tiny.css" media="screen and (max-width:480px)">
   <link rel=stylesheet href="/css/size-full.css" media="screen and (min-width:481px)">
   
@@ -35,12 +36,12 @@
     <div class=topbar>
       <div class=fill>
         <div class=container>
-          <a class=brand>HTML5Hipster</a>
-          <ul class="nav secondary-nav">        
+          <a class=brand>HTML5 Hipster</a>
+          <ul class="nav secondary-nav">       
             <li class=dropdown data-dropdown=dropdown>
               <a href="#" class=dropdown-toggle>Share</a>
               <ul class=dropdown-menu>
-                <li><a href="#">Save</a></li>
+                <li><a href="#" onclick="Hipster.savePNG()">Save</a></li>
                 <li class=divider></li>
                 <li><a href="#">Recommend</a></li>
                 <li><a href="#">Tweet</a></li>
@@ -65,21 +66,37 @@
         <button type=button class=box>item 10</button>
       </div>
       <div id=hipster-container>
-        <div id=hipster>
-          <img src="/img/html5hipster-small.png">
+        <canvas id=saveCanvas style="display:none;"></canvas>
+        <div draggable=true style="" id=imgDrag>
+          <svg id=hipster version="1.1"  
+            baseProfile=full viewBox="0 0 550 800" 
+            xmlns="http://www.w3.org/2000/svg">
+            
+            <g id=legs transform="translate(20, 75)">
+              <rect class=body-leg id=leg-left x=125 y=475 width=100 height=125 />
+              <rect class=body-leg id=leg-right x=285 y=475 width=100 height=125 />
+            </g>
+            
+            <g id=torso transform="translate(20, 75)">
+              <path id=body-dark d="M71,460 L30,0 481,0 440,460 255,512"/>
+              <path id=body-light d="M256,472 L405,431 440,37 256,37"/>
+              <path id=body-five-left d="M256,208 L181,208 176,150 256,150 256,94 255,94 114,94 115,109 129,265 256,265zM256,355 L255,355 192,338 188,293 158,293 132,293 139,382 255,414 256,414z"/>
+              <path id=body-five-right d="M255,208 L255,265 325,265 318,338 255,355 255,414 371,382 372,372 385,223 387,208 371,208zM255,94 L255,129 255,150 255,150 392,150 392,150 392,150 393,138 396,109 397,94z"/>
+            </g>
+            <g id=arm-left transform="translate(0, 225)">
+              <circle class=arm-shoulder cx=25 cy=25 r=25 />
+              <rect class=arm-forearm x=0 y=25 width=50 height=180 />
+              <polygon class=arm-hand points="0,205 50,205 45,255 25,265 5,255"/>
+            </g>
+            <g id=arm-right transform="translate(500, 225)">
+              <circle class=arm-shoulder cx=25 cy=25 r=25 />
+              <rect class=arm-forearm x=0 y=25 width=50 height=180 />
+              <polygon class=arm-hand points="0,205 50,205 45,255 25,265 5,255"/>
+            </g>
+          </svg>
         </div>
       </div>
       <div id=item-selector>
-        <div>
-          <button type=button class=box id=item-body>body</button>
-          <button type=button class=box id=item-hair>hair</button>
-          <button type=button class=box id=item-shirt>shirt</button>
-          <button type=button class=box id=item-pants>pants</button>
-          <button type=button class=box id=item-shoes>shoes</button>
-          <button type=button class=box id=item-glasses>glasses</button>
-          <button type=button class=box id=item-face>face</button>
-          <button type=button class=box id=item-accessories>access</button>
-        </div>
       </div>
 
     </div> 
@@ -93,7 +110,7 @@
   <script>window.jQuery||document.write('<script src="/js/libs/jquery-1.7.0.min.js"><\/script>');</script>
 
 
-  <script defer src='/js/83e9067.js'></script>
+  <script defer src='/js/94959c2.js'></script>
 
   
   <!--[if lt IE 7 ]><script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
