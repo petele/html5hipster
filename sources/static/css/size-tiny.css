@@ -1,14 +1,15 @@
 #item-collection {
-  margin-bottom: 125px;
-  width: 80px;
+  width: 90px;
 }
 
 #item-selector {
-  height: 70px; 
+  height: 80px; 
 }
 
-#hipster-container {
-  margin-left: 75px;
+#items {
+  margin-left:auto;
+  margin-right:auto;
+  width: 750px;
 }
 
 .box {
@@ -16,14 +17,18 @@
   height: 50px;
 }
 
-#item-collection .box {
-  margin: 10px 15px;
+#hipster-container {
+  height: 600px;
 }
 
-#item-selector .box {
+#item-collection .box {
   margin: 10px;
 }
 
+#item-selector .box {
+  margin: 10px 5px;
+}
+
 #hipster {
-  width:200px;
+  height:0px;
 }

@@ -63,6 +63,7 @@ var Hipster = (function(){
     var winHeight = $(window).height();
     winHeight = winHeight - $(".topbar").height() - $("#item-selector").height();
     $("#item-collection, #hipster-container").height(winHeight);
+    console.log(winHeight);
     $("#hipster").height(winHeight);
   }
   this.screenResize = _screenResize;
@@ -70,16 +71,15 @@ var Hipster = (function(){
   function _updateFeatures(data){
     var len = data.length;
     var featureButtons = $("<div id='items' />");
-    var width = 0;
     for (var i = 0; i < len; i++) {
       var but = $("<button type='button' class='box' id='item-"+ data[i].featureid+"'>"+data[i].featurename+"</button>");
-      width += but.outerWidth();
       featureButtons.append(but);
     }
     featureButtons.find("button").click(function() {
       $("#item-selector .box.active").removeClass("active");
       $(this).addClass("active");  
     });
+    console.log(featureButtons);
     $("#item-selector").html(featureButtons);
   }
   
