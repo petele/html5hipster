@@ -1,5 +1,5 @@
 #item-collection {
-  padding-bottom: 50px;
+  padding-bottom: 150px;
   width: 200px;
 }
 
@@ -10,7 +10,8 @@
 
 #hipster-container {
   margin-left: 200px;
-  margin-bottom: 125px;
+  margin-bottom: 130px;
+  padding: 25px;
 }
 
 .box {
@@ -27,5 +28,6 @@
 }
 
 #hipster {
-  width:200px;
+  height: 400px;
+  margin-bottom: 150px;
 }

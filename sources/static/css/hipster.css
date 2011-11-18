@@ -1,0 +1,33 @@
+#body-dark {
+  fill: #E34F26;
+  z-index: 500;
+}
+
+#body-light {
+  fill: #EF652A;
+}
+
+#body-five-left {
+  fill: #EBEBEB;
+}
+
+#body-five-right {
+  fill: white;
+}
+
+.body-leg {
+  fill: #EF652A;
+  z-index: 200;
+}
+
+.arm-forearm {
+  fill: #EF652A;
+}
+
+.arm-shoulder {
+  fill: #EF652A;
+}
+
+.arm-hand {
+  fill: #EF652A;
+}

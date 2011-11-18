@@ -10,10 +10,20 @@ body {
   padding: 0 20px;
 }
 
+.container {
+  position: relative;
+}
+
 #item-collection {
   -webkit-box-sizing: border-box;
-  position: fixed;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
   left: 0px;
+  top: 0px;
+  border: 1px solid green;
   background-color: #eee;
   height: 100%;
   overflow-y: auto;
@@ -56,4 +66,5 @@ body {
   margin-right:auto;
   display:block;
   -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)));
+  border: 1px solid blue;
 }
