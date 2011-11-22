@@ -1,6 +1,6 @@
 
 
-#item-collection {
+.item-collection {
   width: 200px;
 }
 
@@ -23,7 +23,7 @@
   height: 100px;
 }
 
-#item-collection .box {
+.item-collection .box {
   margin: 10px auto;
 }
 

@@ -44,14 +44,17 @@ var Hipster = (function(){
     }
     if (show) {
       $("#item-selector").fadeIn('fast');
-      $("#item-collection").fadeIn('fast');
+      var active = $("#item-selector .box.active");
+      if (active.length >= 1) {
+        $("#itm-"+ $(active).data("featureid")).fadeIn('fast');
+      }
       $("#hipster-container")
         .css("margin-left", $("#item-collection").outerWidth())
         .css("margin-top", "0");
     } else {
       var height = $("#item-selector").outerHeight() / 2;
       $("#item-selector").fadeOut('fast');
-      $("#item-collection").fadeOut('fast');
+      $(".item-collection").fadeOut('fast');
       $("#hipster-container")
         .css("margin-left", "0")
         .css("margin-top", height);
@@ -62,7 +65,7 @@ var Hipster = (function(){
   function _screenResize() {
     var winHeight = $(window).height();
     winHeight = winHeight - $(".topbar").height() - $("#item-selector").height();
-    $("#item-collection, #hipster-container").height(winHeight);
+    $(".item-collection, #hipster-container").height(winHeight);
     console.log(winHeight);
     $("#hipster").height(winHeight);
   }
@@ -73,14 +76,36 @@ var Hipster = (function(){
     var featureButtons = $("<div id='items' />");
     for (var i = 0; i < len; i++) {
       var but = $("<button type='button' class='box' id='item-"+ data[i].featureid+"'>"+data[i].featurename+"</button>");
+      but.data("featureid", data[i].featureid);
       featureButtons.append(but);
+      var items = $("<div class='item-collection'></div>");
+      items.attr("id", "itm-" + data[i].featureid)
+      var item_len = data[i].options.length;
+      for (var j = 0; j < item_len; j++) {
+        var item_but = $("<button type='button' class='box' id='item-"+ data[i].options[j].id+"'>"+data[i].options[j].name+"</button>"); 
+        if (data[i].options[j].default) {
+          item_but.addClass("active");
+        }
+        items.append(item_but);
+      }
+      $("#itemlist").append(items);
     }
     featureButtons.find("button").click(function() {
       $("#item-selector .box.active").removeClass("active");
-      $(this).addClass("active");  
+      $(this).addClass("active"); 
+      var x = "#itm-"+ $(this).data("featureid");
+      $(".item-collection:visible").fadeOut('fast');
+      $(x).fadeIn('fast');
     });
-    console.log(featureButtons);
+    $(".item-collection").find("button").click(function() {
+      _toggleItem($(this));
+    });
     $("#item-selector").html(featureButtons);
+  }
+  
+  function _toggleItem(jqElem) {
+    console.log(jqElem);
+    jqElem.toggleClass("active");
   }
   
   function _convertSVG(sourceSVG, targetCanvas) {

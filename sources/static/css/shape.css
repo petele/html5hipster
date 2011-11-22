@@ -10,7 +10,7 @@ body {
   padding: 0 20px;
 }
 
-#item-collection {
+.item-collection {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -70,7 +70,7 @@ body {
   transition: all 0.25s ease-in-out;
 }
 
-#item-collection .box {
+.item-collection .box {
   display: block;
 }
 

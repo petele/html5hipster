@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="/css/bootstrap.css">
   <link rel="stylesheet" href="/css/kd.css">
   <link rel="stylesheet" href="/css/shape.css">
-  <link rel="stylesheet" href="/css/hipster.css">
+  <!--<link rel="stylesheet" href="/css/hipster.css">-->
   <link rel="stylesheet" href="/css/size-tiny.css" media="screen and (max-width:480px)">
   <link rel="stylesheet" href="/css/size-full.css" media="screen and (min-width:481px)">
   
@@ -60,17 +60,7 @@
     </div>
     
     <div class="container">
-      <div id="item-collection">
-        <button type="button" class="box">item 1</button>
-        <button type="button" class="box">item 2</button>
-        <button type="button" class="box">item 3</button>
-        <button type="button" class="box">item 4</button>
-        <button type="button" class="box">item 5</button>
-        <button type="button" class="box">item 6</button>
-        <button type="button" class="box">item 7</button>
-        <button type="button" class="box">item 8</button>
-        <button type="button" class="box">item 9</button>
-        <button type="button" class="box">item 10</button>
+      <div id="itemlist">
       </div>
       <div id="hipster-container">
         <canvas id="saveCanvas" style="display:none;"></canvas>
@@ -80,25 +70,25 @@
             xmlns="http://www.w3.org/2000/svg">
             
             <g id="legs" transform="translate(20, 75)">
-              <rect class="body-leg" id="leg-left" x="125" y="475" width="100" height="125" />
-              <rect class="body-leg" id="leg-right" x="285" y="475" width="100" height="125" />
+              <rect id="leg-left" fill="#EF652A" x="125" y="475" width="100" height="125" />
+              <rect id="leg-right" fill="#EF652A" x="285" y="475" width="100" height="125" />
             </g>
             
             <g id="torso" transform="translate(20, 75)">
-              <path id="body-dark" d="M71,460 L30,0 481,0 440,460 255,512"/>
-              <path id="body-light" d="M256,472 L405,431 440,37 256,37"/>
-              <path id="body-five-left" d="M256,208 L181,208 176,150 256,150 256,94 255,94 114,94 115,109 129,265 256,265zM256,355 L255,355 192,338 188,293 158,293 132,293 139,382 255,414 256,414z"/>
-              <path id="body-five-right" d="M255,208 L255,265 325,265 318,338 255,355 255,414 371,382 372,372 385,223 387,208 371,208zM255,94 L255,129 255,150 255,150 392,150 392,150 392,150 393,138 396,109 397,94z"/>
+              <path id="torso-dark" fill="#E34F26" d="M71,460 L30,0 481,0 440,460 255,512"/>
+              <path id="torso-light" fill="#EF652A" d="M256,472 L405,431 440,37 256,37"/>
+              <path id="torso-five-dark" fill="#EBEBEB" d="M256,208 L181,208 176,150 256,150 256,94 255,94 114,94 115,109 129,265 256,265zM256,355 L255,355 192,338 188,293 158,293 132,293 139,382 255,414 256,414z"/>
+              <path id="torso-five-light" fill="white" d="M255,208 L255,265 325,265 318,338 255,355 255,414 371,382 372,372 385,223 387,208 371,208zM255,94 L255,129 255,150 255,150 392,150 392,150 392,150 393,138 396,109 397,94z"/>
             </g>
             <g id="arm-left" transform="translate(0, 225)">
-              <circle class="arm-shoulder" cx="25" cy="25" r="25" />
-              <rect class="arm-forearm" x="0" y="25" width="50" height="180" />
-              <polygon class="arm-hand" points="0,205 50,205 45,255 25,265 5,255" />
+              <circle id="arm-left-shoulder" fill="#EF652A" cx="25" cy="25" r="25" />
+              <rect id="arm-left-forarm" fill="#EF652A" x="0" y="25" width="50" height="180" />
+              <polygon id="arm-left-hand" fill="#EF652A" points="0,205 50,205 45,255 25,265 5,255" />
             </g>
             <g id="arm-right" transform="translate(500, 225)">
-              <circle class="arm-shoulder" cx="25" cy="25" r="25" />
-              <rect class="arm-forearm" x="0" y="25" width="50" height="180" />
-              <polygon class="arm-hand" points="0,205 50,205 45,255 25,265 5,255" />
+              <circle id="arm-right-shoulder" fill="#EF652A" cx="25" cy="25" r="25" />
+              <rect id="arm-right-forearm" fill="#EF652A" x="0" y="25" width="50" height="180" />
+              <polygon id="arm-right-hand" fill="#EF652A" points="0,205 50,205 45,255 25,265 5,255" />
             </g>
           </svg>
         </div>
