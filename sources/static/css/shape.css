@@ -10,7 +10,7 @@ body {
   padding: 0 20px;
 }
 
-.item-collection {
+#itemlist {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -92,4 +92,50 @@ body {
   margin-left:auto;
   margin-right:auto;
   display:block;
+}
+
+.animate-hipster {
+  -webkit-animation-delay: 500ms;
+	-webkit-animation-name: hipster-hover;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-timing-function: ease-in;
+	-webkit-animation-iteration-count: infinite;
+	/*position: relative;*/
+}
+
+@-webkit-keyframes hipster-hover {
+  0% {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  
+  83% {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  
+  84% {
+    margin-top: -2px;
+    margin-left: 0px;
+  }
+  
+  88% {
+    margin-top: 2px;
+    margin-left: 0px;
+  }
+  
+  92% {
+    margin-top: -2px;
+    margin-left: 2px; 
+  }
+  
+  96% {
+    margin-top: 2px;
+    margin-left: 2px;
+  }
+  
+  100% {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
 }

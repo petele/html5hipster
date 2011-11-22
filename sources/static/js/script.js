@@ -46,28 +46,33 @@ var Hipster = (function(){
       $("#item-selector").fadeIn('fast');
       var active = $("#item-selector .box.active");
       if (active.length >= 1) {
+        $("#itemlist").fadeIn('fast');
         $("#itm-"+ $(active).data("featureid")).fadeIn('fast');
       }
+      console.log("X");
       $("#hipster-container")
-        .css("margin-left", $("#item-collection").outerWidth())
+        .css("margin-left", $(".item-collection").outerWidth())
         .css("margin-top", "0");
     } else {
       var height = $("#item-selector").outerHeight() / 2;
       $("#item-selector").fadeOut('fast');
-      $(".item-collection").fadeOut('fast');
+      $("#itemlist").fadeOut('fast');
       $("#hipster-container")
-        .css("margin-left", "0")
+        .css("margin-left", 0)
         .css("margin-top", height);
     }
   }
   this.toggleControls = _toggleControls;
     
   function _screenResize() {
+    var height = $("#item-selector").outerHeight() / 2;
+    $("#hipster-container").css("margin-top", height);
     var winHeight = $(window).height();
     winHeight = winHeight - $(".topbar").height() - $("#item-selector").height();
-    $(".item-collection, #hipster-container").height(winHeight);
-    console.log(winHeight);
+    $("#itemlist, #hipster-container").height(winHeight);
     $("#hipster").height(winHeight);
+    
+    
   }
   this.screenResize = _screenResize;
   
@@ -93,9 +98,14 @@ var Hipster = (function(){
     featureButtons.find("button").click(function() {
       $("#item-selector .box.active").removeClass("active");
       $(this).addClass("active"); 
-      var x = "#itm-"+ $(this).data("featureid");
-      $(".item-collection:visible").fadeOut('fast');
-      $(x).fadeIn('fast');
+      
+      if ($("#itemlist:visible").length == 0) {
+        $("#hipster-container").css("margin-left", $("#itemlist").outerWidth());
+        $("#itemlist").fadeIn('fast');
+      }
+      
+      $(".item-collection:visible").hide();
+      $("#itm-"+ $(this).data("featureid")).fadeIn('fast');
     });
     $(".item-collection").find("button").click(function() {
       _toggleItem($(this));
