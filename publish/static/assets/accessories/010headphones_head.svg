@@ -3,9 +3,6 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="content" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="500px" height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
-<g id="bounds">
-	<rect x="93.596" y="-47.382" fill="none" stroke="#000000" stroke-width="0.9617" width="311.594" height="311.595"/>
-</g>
 <g id="accessory">
 	<path fill="#2D2D2D" d="M349.809,106.449c-0.07-0.119-7.201-11.988-23.004-23.68c-14.543-10.76-39.662-23.587-76.742-23.587
 		c-37.078,0-62.199,12.827-76.744,23.587c-15.801,11.691-22.932,23.561-23.002,23.68l-6.895-4.058

@@ -20,10 +20,6 @@ var Hipster = (function(){
     //e.dataTransfer.setData('DownloadURL', "A");
   });
   
-  $("#item-collection .box").click(function() {
-    $(this).toggleClass("active");  
-  });
-  
   $("#hipster-container").click(function() {
     _toggleControls(); 
   });
@@ -49,7 +45,6 @@ var Hipster = (function(){
         $("#itemlist").fadeIn('fast');
         $("#itm-"+ $(active).data("featureid")).fadeIn('fast');
       }
-      console.log("X");
       $("#hipster-container")
         .css("margin-left", $(".item-collection").outerWidth())
         .css("margin-top", "0");
@@ -88,8 +83,21 @@ var Hipster = (function(){
       var item_len = data[i].options.length;
       for (var j = 0; j < item_len; j++) {
         var item_but = $("<button type='button' class='box' id='item-"+ data[i].options[j].id+"'>"+data[i].options[j].name+"</button>"); 
-        if (data[i].options[j].default) {
+        if (data[i].options[j].default_item) {
           item_but.addClass("active");
+          item_but.data("default", true);
+        } else {
+          item_but.data("default", false);
+        }
+        item_but.data("multiple", data[i].multiple);
+        item_but.data("featureid", data[i].featureid);
+        item_but.data("itemid", data[i].options[j].id);
+        item_but.data("name", data[i].options[j].name);
+        if (data[i].options[j].file) {
+          item_but.data("file", data[i].options[j].file);
+          item_but.data("x", data[i].options[j].x);
+          item_but.data("y", data[i].options[j].y);
+          item_but.data("scale", data[i].options[j].scale);
         }
         items.append(item_but);
       }
@@ -114,9 +122,66 @@ var Hipster = (function(){
   }
   
   function _toggleItem(jqElem) {
-    console.log(jqElem);
-    jqElem.toggleClass("active");
+    if (!jqElem.data("multiple")) {
+      if (!$(".item-collection:visible .active").is(jqElem)) {
+        $(".item-collection:visible .active").removeClass("active");
+        $("#hipster #" + jqElem.data("featureid")).remove();    
+      }
+    }
+      
+    var addAsset = !jqElem.hasClass("active");
+    if (addAsset) {
+      _addAsset(jqElem.data("file"), jqElem.data("itemid"), jqElem.data("x"), jqElem.data("y"), jqElem.data("scale"));
+      jqElem.addClass("active");
+    } else {
+      _removeAsset(jqElem.data("itemid"));
+      jqElem.removeClass("active");
+    }
   }
+  
+  function _removeAsset(asset_id) {
+    var selector = "#hipster #itemid-" + asset_id;
+    $(selector).remove();
+  }
+  
+  function _addAsset(url_to_asset, asset_id, x, y, scale) {
+    var req = $.ajax({
+      url: url_to_asset,
+      dataType: "xml",
+      cache: true
+    });
+    var item_info = {};
+    item_info.id = asset_id;
+    item_info.x = x;
+    item_info.y = y;
+    item_info.scale = scale;
+    req.item_info = item_info;
+    req.done(function(data, result, response) {
+      var item = $(data).find("svg");
+      var cw = item.attr("width");
+      cw = parseInt(cw) * response.item_info.scale;
+      item.addClass("custom-svg")
+        .attr("id", "itemid-" + response.item_info.id)
+        .attr("x", response.item_info.x)
+        .attr("y", response.item_info.y)
+        .attr("width", cw);
+      $("#hipster").append(item);
+    });
+  }
+  
+  function _testAdd() {
+    _addAsset('/assets/accessories/bluebeanie.svg', "bluebeanie", 125, -160, 0.8);
+  }
+  this.testAdd = _testAdd;
+  function _testRemove() {
+    _removeAsset("bluebeanie");
+  }
+  this.testRemove = _testRemove;
+  
+  function _resetHipster() {
+    $("#hipster svg").remove();
+  }
+  this.resetHipster = _resetHipster;
   
   function _convertSVG(sourceSVG, targetCanvas) {
     // http://www.svgopen.org/2010/papers/62-From_SVG_to_Canvas_and_Back/

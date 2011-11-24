@@ -3,10 +3,6 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="content" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="500px" height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
-<g id="bounds" display="none">
-	
-		<rect x="133.902" y="5" display="inline" fill="none" stroke="#000000" stroke-width="1.2059" stroke-miterlimit="10" width="231.315" height="231.316"/>
-</g>
 <g id="glasses">
 	<path opacity="0.4" fill="#FFFFFF" enable-background="new    " d="M335.016,118.215c-0.503,5.451-1.885,12.411-2.707,15.155
 		c-0.855,2.893-2.36,7.101-7.044,11.125c-4.157,3.576-9.752,7.104-17.811,8.108c-7.448,0.929-16.765,0.924-22.406-0.743
