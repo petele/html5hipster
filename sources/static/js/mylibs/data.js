@@ -1,7 +1,11 @@
 var hipster_data = '[';
 hipster_data += '{"featurename":"Body Color", "featureid":"bodycolor", "thumbnail":"", "min":1, "multiple": false, "options":['; 
-hipster_data += '{"id": "body-blue", "name": "Blue", "dark":"#ff0000", "light":"#cc0000", "inner1":"#0000eb", "inner2":"#0000ff", "shoulder":"#0000cc", "forarm":"#880000", "hand":"#990099", "leg":"#009999"},';
-hipster_data += '{"id": "body-orange", "name": "Orange", "default_item": true, "dark":"#E34F26", "light":"#EF652A", "inner1":"#EBEBEB", "inner2":"#ffffff", "shoulder":"#EF652A", "forarm":"#EF652A", "hand":"#EF652A", "leg":"#EF652A"}]';
+hipster_data += '{"id": "body-orange", "name": "Orange", "default_item": true, "dark":"#E34F26", "light":"#EF652A", "inner1":"#EBEBEB", "inner2":"#ffffff", "shoulder":"#EF652A", "forarm":"#EF652A", "hand":"#EF652A", "leg":"#EF652A"},';
+hipster_data += '{"id": "body-lblue", "name": "Light Blue", "dark":"#29bee3", "light":"#2bc8f0", "inner1":"#ebebeb", "inner2":"#ffffff", "shoulder":"#2bc8f0", "forarm":"#2bc8f0", "hand":"#2bc8f0", "leg":"#2bc8f0"},';
+hipster_data += '{"id": "body-dblue", "name": "Dark Blue", "dark":"#2929e3", "light":"#2b2bf0", "inner1":"#ebebeb", "inner2":"#ffffff", "shoulder":"#2b2bf0", "forarm":"#2b2bf0", "hand":"#2b2bf0", "leg":"#2b2bf0"},';
+hipster_data += '{"id": "body-purple", "name": "Purple", "dark":"#8629e3", "light":"#8d2bf0", "inner1":"#ebebeb", "inner2":"#ffffff", "shoulder":"#8d2bf0", "forarm":"#8d2bf0", "hand":"#8d2bf0", "leg":"#8d2bf0"},';
+hipster_data += '{"id": "body-yellow", "name": "Yellow", "dark":"#e3c429", "light":"#f0cf2b", "inner1":"#ebebeb", "inner2":"#ffffff", "shoulder":"#f0cf2b", "forarm":"#f0cf2b", "hand":"#f0cf2b", "leg":"#f0cf2b"},';
+hipster_data += '{"id": "body-green", "name": "Green", "dark":"#29e329", "light":"#2bf02b", "inner1":"#ebebeb", "inner2":"#ffffff", "shoulder":"#2bf02b", "forarm":"#2bf02b", "hand":"#2bf02b", "leg":"#2bf02b"}]';
 hipster_data += '},';
 hipster_data += '{"featurename":"Hair", "featureid":"hair", "thumbnail":"file", "multiple": false, "options":[ ';
 hipster_data += '{"id": "hair-none", "default_item":true, "name": "None"},';
