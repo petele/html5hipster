@@ -83,24 +83,31 @@ body {
   color: white;
 }
 
+#hipster-container {
+  /*border: 1px solid red;*/
+}
+
 #hipster {
+  /*border: 1px solid green;*/
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -ms-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  margin-left:auto;
-  margin-right:auto;
-  display:block;
+  position: absolute;
+  display: none;
 }
 
-.animate-hipster {
+#hipster-svg {
+  /*border: 1px solid blue;*/
+}
+
+.animate {
   -webkit-animation-delay: 500ms;
 	-webkit-animation-name: hipster-hover;
 	-webkit-animation-duration: 5s;
 	-webkit-animation-timing-function: ease-in;
 	-webkit-animation-iteration-count: infinite;
-	/*position: relative;*/
 }
 
 @-webkit-keyframes hipster-hover {

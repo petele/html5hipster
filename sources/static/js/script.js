@@ -7,6 +7,7 @@ var Hipster = (function(){
   $(document).ready(function(){
     _screenResize(); 
     _updateFeatures(hipster_data);
+    $("#hipster").fadeIn('fast');
   });
   
   // recalculate window width if you resize the browser
@@ -60,14 +61,14 @@ var Hipster = (function(){
   this.toggleControls = _toggleControls;
     
   function _screenResize() {
-    var height = $("#item-selector").outerHeight() / 2;
-    $("#hipster-container").css("margin-top", height);
-    var winHeight = $(window).height();
-    winHeight = winHeight - $(".topbar").height() - $("#item-selector").height();
-    $("#itemlist, #hipster-container").height(winHeight);
-    $("#hipster").height(winHeight);
-    
-    
+    $("#hipster-container").css("margin-top", $("#item-selector").outerHeight() / 2);
+    var hipsterHeight = $(window).height() - $(".topbar").height() - $("#item-selector").height();
+    var hipsterWidth = (hipsterHeight * 0.65);
+    var hipsterLeft = ($(window).width() - hipsterWidth) / 2;
+    $("#itemlist, #hipster-container").height(hipsterHeight);
+    $("#hipster").height(hipsterHeight)
+      .width(hipsterWidth)
+      .css("left", hipsterLeft + "px");
   }
   this.screenResize = _screenResize;
   
@@ -168,7 +169,7 @@ var Hipster = (function(){
   }
   
   function _setBodyColor(jqElem) {
-    console.log("SetBodyColor", jqElem, jqElem.data("dark"));
+    log("SetBodyColor", jqElem, jqElem.data("dark"));
     $(".item-collection:visible .active").removeClass("active");
     jqElem.addClass("active");
     $("#torso-dark").attr("fill", jqElem.data("dark"));
@@ -183,32 +184,32 @@ var Hipster = (function(){
   }
   
   function _setHairColor(jqElem) {
-    console.log("SetHairColor", jqElem, jqElem.data("color"), $("#hair"));
+    log("SetHairColor", jqElem, jqElem.data("color"), $("#hair"));
     $(".haircolor.active").removeClass("active");
     jqElem.addClass("active");
     $("#hair").attr("fill", jqElem.data("color"));
   }
   
   function _addShirt(jqElem) {
-    console.log("AddShirt", jqElem);
+    log("AddShirt", jqElem);
     $(".item-collection:visible .active").removeClass("active");
     jqElem.addClass("active");
   }
   
   function _addPants(jqElem) {
-    console.log("AddPants", jqElem);
+    log("AddPants", jqElem);
     $(".item-collection:visible .active").removeClass("active");
     jqElem.addClass("active");
   }
   
   function _addShoes(jqElem) {
-    console.log("AddShoes", jqElem);
+    log("AddShoes", jqElem);
     $(".item-collection:visible .active").removeClass("active");
     jqElem.addClass("active");
   }
   
   function _toggleAsset(jqElem) {
-    console.log("ToggleAsset", jqElem);
+    log("ToggleAsset", jqElem);
     if (!jqElem.data("multiple")) {
       if (!$(".item-collection:visible .active").is(jqElem)) {
         $("#hipster ." + jqElem.data("featureid")).remove();  
@@ -250,8 +251,7 @@ var Hipster = (function(){
       if (item.find("#hair").length == 1) {
         item.find("#hair").attr("fill", $(".haircolor.active").data("color"));
       }
-      $("#hipster").append(item);
-      //console.log("Add", item);
+      $("#hipster-body").append(item);
     });
   }
   
@@ -273,7 +273,7 @@ var Hipster = (function(){
     // http://en.wikipedia.org/wiki/SVG#Native_support
     // https://developer.mozilla.org/en/DOM/window.btoa
     img.src = "data:image/svg+xml;base64," + btoa(svg_xml);
-    console.log("Image Source", img.src);
+    log("Image Source", img.src);
   }
   
   function _savePNG() {
